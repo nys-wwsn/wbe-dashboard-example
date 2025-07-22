@@ -1,4 +1,4 @@
-# Wastewater-based Epidemiology Dashboard
+# Wastewater-Based Epidemiology Dashboard
 This repository contains code and example data for building a dashboard for displaying wastewater-based epidemiology (WBE) data including time-series and spatial results. The examples here are allow users to create their own dashboard using the same code with options to modify for any pathogen of interest. Results can be displayed in time-series plots showing quantifiable detections, detect/non-detects only, and maps showing recent trends.
 
 The code provided here is adapted from a previous version published in the journal *Methods X*. The full citation is Hill D, Dunham C, Larsen DA, Collins M. Operationalizing an open-source dashboard for communicating results of wastewater-based surveillance. *MethodsX*. 2023 Dec 1;11:102299. [https://www.sciencedirect.com/science/article/pii/S2215016123002960](https://www.sciencedirect.com/science/article/pii/S2215016123002960)
