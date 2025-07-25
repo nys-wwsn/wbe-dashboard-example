@@ -122,6 +122,11 @@ data <- left_join(data, c_data, by = c("sample_collect_date",
 ny_sf <- tigris::states(cb = FALSE) %>%
   filter(NAME == "New York")
 
+# transform data
+ny_sf <- ny_sf %>%
+  sf::st_transform(ny_sf,
+                   crs = c("+proj=longlat +datum=WGS84"))
+
 # create fields to toggle in the map
 
 # trend - pathogen 1
@@ -268,8 +273,7 @@ ui <-
       
       dashboardBody(
         useShinyjs(), #for shinyjs code to work
-        useShinyalert(),  # Set up shinyalert
-        
+
         # CSS style arguments (e.g., font size)
         # increase size of acutal map display based on window
         tags$style(
@@ -612,7 +616,7 @@ server <- function(input, output, session) {
       gt() %>%
       data_color(
         columns = "Detection level",
-        colors = scales::col_factor(alert_colors,
+        fn = scales::col_factor(alert_colors,
                                     levels = alert_levels, ordered = TRUE)
       )
   )
@@ -625,7 +629,7 @@ server <- function(input, output, session) {
       gt() %>%
       data_color(
         columns = "Trend",
-        colors = scales::col_factor(trend_colors,
+        fn = scales::col_factor(trend_colors,
                                     levels = trend_levels,
                                     ordered = TRUE)
       )
