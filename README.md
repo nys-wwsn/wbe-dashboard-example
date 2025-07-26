@@ -10,4 +10,7 @@ This repo contains one R script that is an R `shiny` app. You  can download and 
 ## Web version of example dashboard
 You can view a live version of this testing dashboard at the following link: [https://nywastewatcher.shinyapps.io/wbe-dashboard-example/](https://nywastewatcher.shinyapps.io/wbe-dashboard-example/). This is a free and open source link. Please remember to close your browser once you have finished viewing the example dashbaord.
 
+## Additional help with dashboard creation
+For more information and code breakdown, visit the following webpage: [https://dthill196.github.io/SARS-2-Dashboard-Tutorial/](https://dthill196.github.io/SARS-2-Dashboard-Tutorial/)
+
 ### For more information on the NYS Wastewater Network, please visit [https://nywastewatcher.io/](https://nywastewatcher.io/)
